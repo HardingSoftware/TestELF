@@ -10,25 +10,27 @@ CMAKE_ARGS_COMMON="${CMAKE_ARGS_COMMON}    \
     -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang \
     -DANDROID_ABI="arm64-v8a" \
     -DANDROID_ARM_NEON=ON \
-    -DANDROID_PLATFORM=android-21 \
     -DANDROID_TOOLCHAIN=clang "
 
 ANDROID_NDK=/Users/harding/MyLibrary/android-ndk-r20b
 CMAKE_ARGS_SDK1="${CMAKE_ARGS_COMMON}    \
     -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
     -DANDROID_STL=c++_static \
+    -DANDROID_PLATFORM=android-19 \
     -DANDROID_NDK=$ANDROID_NDK"
 
 ANDROID_NDK=/Users/harding/MyLibrary/android-ndk-r21b
 CMAKE_ARGS_SDK2="${CMAKE_ARGS_COMMON}    \
     -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
     -DANDROID_STL=c++_shared \
+    -DANDROID_PLATFORM=android-21 \
     -DANDROID_NDK=$ANDROID_NDK"
 
 ANDROID_NDK=/Users/harding/MyLibrary/android-ndk-r16b
 CMAKE_ARGS_APP="${CMAKE_ARGS_COMMON}    \
     -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
     -DANDROID_STL=c++_shared \
+    -DANDROID_PLATFORM=android-23 \
     -DANDROID_NDK=$ANDROID_NDK"
 
 # SDK1

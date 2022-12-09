@@ -23,4 +23,11 @@ void cook(std::vector<TestType> &vt) {
     vt[s0].c = 4;
     vt[s0].d = 5;
   }
+  for (int i = 0; i < 20; i++) {
+    vt.push_back(TestType());
+  }
+
+  std::vector<bool> vb;
+  vb.push_back(true);
+  vb.push_back(false);
 }
