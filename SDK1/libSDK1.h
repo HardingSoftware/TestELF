@@ -1,13 +1,12 @@
-#include <vector>
 
-std::vector<int> CreateVec(int n);
-void add1(std::vector<int>& v);
+__attribute__((visibility("default"))) void SDK1();
 
-struct TestType{
-    int a;
-    int b;
-    char c;
-    bool d;
-};
-
-void cook(std::vector<TestType>& vt);
+template <typename DType>
+__attribute__((visibility("default"))) DType FuncSum(DType a) {
+  printf("%s:%d\n", __FILE__, __LINE__);
+  DType ret = 0;
+  for (int i0 = 0; i0 < a; ++i0) {
+    ret += i0;
+  }
+  return ret;
+}

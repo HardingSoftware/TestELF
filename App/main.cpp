@@ -3,23 +3,13 @@
 #include "libSDK1.h"
 #include "libSDK2.h"
 
+template <typename DType> void Func(DType a);
+
 int main() {
+  SDK1();
+  SDK2();
 
-  // std::vector<int> v0(10);
-  // v0[11] = 2;
-
-  int n = 100;
-
-  std::vector<int> v = CreateVec(n); // SDK1
-  add1(v);                           // SDK1
-
-  int sum = GetSum(v); // SDK2
-
-  printf("SUM %d\n", sum);
-
-  std::vector<TestType> vt(100);
-
-  cook(vt);
+  Func<int>(100);
 
   return 0;
 }

@@ -2,12 +2,15 @@
 
 #include "libSDK2.h"
 
-int GetSum(const std::vector<int>& v) {
-  size_t N = v.size();
+template <typename DType>
+__attribute__((noinline)) __attribute__((weak))
+__attribute__((visibility("default"))) void
+Func(DType a) {
+  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  printf("  p = %d\n", a);
+}
 
-  int sum = 0;
-  for (size_t n0 = 0; n0 < N; ++n0) {
-    sum +=v[n0];
-  }
-  return sum;
+void SDK2() {
+  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  Func<int>(2);
 }

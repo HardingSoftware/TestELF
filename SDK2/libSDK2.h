@@ -1,3 +1,1 @@
-#include <vector>
-
-int GetSum(const std::vector<int>& v);
+__attribute__((visibility("default"))) void SDK2();
