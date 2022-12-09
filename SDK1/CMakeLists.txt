@@ -18,7 +18,7 @@ function(GetAndroidArchitecture ABI ARCH)
     endif()
 endfunction()
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+if(CMAKE_BUILD_TYPE STREQUAL "Debug" AND NOT BUILD_WITHOUT_ASAN)
     # Enable address sanitizer on GCC/clang
     add_compile_options(-fsanitize=address -fno-omit-frame-pointer)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
