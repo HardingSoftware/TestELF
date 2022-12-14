@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 
 template <typename DType> DType TemplateFunc(DType a);
 void Func();

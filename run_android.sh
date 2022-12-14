@@ -57,10 +57,7 @@ cmake --build . --target SDK2 -j 4
 
 # App
 
-cp ${ScriptPath}/SDK1/libSDK1.h ${ScriptPath}/App/3rd 
 cp ${ScriptPath}/SDK1/$BUILD_DIR/*SDK1* ${ScriptPath}/App/3rd 
-
-cp ${ScriptPath}/SDK2/libSDK2.h ${ScriptPath}/App/3rd 
 cp ${ScriptPath}/SDK2/$BUILD_DIR/*SDK2* ${ScriptPath}/App/3rd 
 
 cd ${ScriptPath}/App
