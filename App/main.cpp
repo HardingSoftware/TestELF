@@ -6,7 +6,14 @@
 template <typename DType> DType TemplateFunc(DType a);
 void Func();
 
+void cook() {
+  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  return;
+}
+
 int main() {
+  cook();
+
   SDK1();
   SDK2();
 
