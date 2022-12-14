@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.6.0 FATAL_ERROR)
 
 project(TestELF)
 
-set(CMAKE_C_FLAGS_DEBUG "-O0 -g")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g -fvisibility=hidden")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -fvisibility=hidden")
 set(CMAKE_C_FLAGS_RELEASE "-Os -fvisibility=hidden")
 set(CMAKE_CXX_FLAGS_RELEASE "-Os -fvisibility=hidden")
 
@@ -91,5 +91,5 @@ set_target_properties(SDK2 PROPERTIES
 
 add_executable(TestELF main.cpp)
 
-# target_link_libraries(TestELF PRIVATE SDK1 SDK2)
-target_link_libraries(TestELF PRIVATE SDK2 SDK1)
+target_link_libraries(TestELF PRIVATE SDK1 SDK2)
+# target_link_libraries(TestELF PRIVATE SDK2 SDK1)

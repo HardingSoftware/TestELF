@@ -1,28 +1,25 @@
 #include <iostream>
 #include <cstdio>
 
-template <typename DType> DType TemplateFunc(DType a);
-void Func();
+void Func_Export();
 
 void SDK1();
 void SDK2();
 
-void cook() {
-  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+void Func_Local() {
+  printf("%s: %s: %d\n", __FILE__, __func__, __LINE__);
   return;
 }
 
 int main() {
-  cook();
-
   SDK1();
   SDK2();
 
-  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  printf("%s: %s: %d\n", __FILE__, __func__, __LINE__);
   printf("  ");
-  TemplateFunc<int>(1);
+  Func_Export();
   printf("  ");
-  Func();
+  Func_Local();
 
   return 0;
 }

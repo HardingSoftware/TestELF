@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.6.0 FATAL_ERROR)
 
 project(SDK1)
 
-set(CMAKE_C_FLAGS_DEBUG "-O0 -g")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g -fvisibility=hidden")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -fvisibility=hidden")
 set(CMAKE_C_FLAGS_RELEASE "-Os -fvisibility=hidden")
 set(CMAKE_CXX_FLAGS_RELEASE "-Os -fvisibility=hidden")
 

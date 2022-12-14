@@ -1,25 +1,22 @@
 #include <iostream>
 #include <cstdio>
 
-template <typename DType>
-__attribute__((noinline)) 
 __attribute__((visibility("default"))) 
-DType TemplateFunc(DType a) {
-  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
-  return a;
+__attribute__((noinline)) 
+void Func_Export()
+{
+  printf("%s: %s: %d\n", __FILE__, __func__, __LINE__);
 }
 
-__attribute__((noinline)) 
-__attribute__((visibility("default"))) 
-void Func()
+void Func_Local()
 {
-  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  printf("%s: %s: %d\n", __FILE__, __func__, __LINE__);
 }
 
 __attribute__((visibility("default"))) void SDK2() {
-  printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
+  printf("%s: %s: %d\n", __FILE__, __func__, __LINE__);
   printf("  ");
-  TemplateFunc<int>(1);
+  Func_Export();
   printf("  ");
-  Func();
+  Func_Local();
 }
