@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "libSDK1.h"
-#include "libSDK2.h"
-
 template <typename DType> DType TemplateFunc(DType a);
 void Func();
+
+void SDK1();
+void SDK2();
 
 void cook() {
   printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);

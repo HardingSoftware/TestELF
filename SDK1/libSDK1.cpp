@@ -1,7 +1,5 @@
 #include <iostream>
 
-#include "libSDK1.h"
-
 template <typename DType>
 __attribute__((noinline)) 
 __attribute__((visibility("default"))) 
@@ -17,7 +15,7 @@ void Func()
   printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
 }
 
-void SDK1() {
+__attribute__((visibility("default"))) void SDK1() {
   printf("%s:%d:%s\n", __FILE__, __LINE__, __func__);
   printf("  ");
   TemplateFunc<int>(1);
