@@ -20,4 +20,3 @@ __attribute__((visibility("default"))) void SDK1() {
   printf("  ");
   Func_Local();
 }
-
