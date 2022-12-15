@@ -11,8 +11,8 @@ mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
 cmake .. ${CMAKE_ARGS}
-cmake --build . --target TestELF -- -j 4
+cmake --build . --target App -- -j 4
 
 echo
 
-./App/TestELF
+./App/App

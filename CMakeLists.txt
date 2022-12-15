@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6.0 FATAL_ERROR)
 # CMake version < 3.6.0 uses all upper cases for Protobuf e.g., PROTOBUF_FOUND
 
-project(TestELF)
+project(TestElf)
 
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)
 
