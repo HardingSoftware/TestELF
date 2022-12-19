@@ -31,7 +31,7 @@ mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
 cmake .. ${CMAKE_ARGS}
-cmake --build . --target App -j 4
+cmake --build . --target App
 
 # Run
 
